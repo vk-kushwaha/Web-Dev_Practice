@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.Dragon-Fire {
+  height: 100vh;
+  width: 100%;
+  background-image: url(./Assets/Sky2.jpg);
+}
+
+.highway {
+  background-image: url(./Assets/road.jpg);
+  height: 220px;
+  position: absolute;
+  bottom: 0px;
+  width: 150%;
+
+  animation-name: highway;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.city {
+  background-image: url(./Assets/City.png);
+  height: 400px;
+  position: absolute;
+  bottom: 200px;
+  width: 200%;
+
+  animation-name: city;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.car {
+  width: 300px;
+  position: absolute;
+  bottom: 0px;
+  left: 60%;
+
+  animation-name: car;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.car img {
+  width: 100%;
+}
+
+.car2 {
+  width: 330px;
+  position: absolute;
+  bottom: 140px;
+  left: 30%;
+
+  animation-name: car;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.car2 img {
+  width: 100%;
+}
+
+.wheel {
+  position: absolute;
+  bottom: 90px;
+  left: 550px;
+}
+
+.wheel img {
+  width: 50px;
+  height: 50px;
+
+  animation-name: wheel;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wheel {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.front-wheel {
+  position: absolute;
+  left: 805px;
+  bottom: 15px;
+}
+
+.back-wheel {
+  position: absolute;
+  left: 625px;
+  bottom: 17px;
+}
+.front-wheel2 {
+  position: absolute;
+  left: 239px;
+  bottom: 70px;
+}
+
+.back-wheel2 {
+  position: absolute;
+  left: 80px;
+  bottom: 73px;
+}
+
+@keyframes city {
+  100% {
+    transform: translateX(-600px);
+  }
+}
+
+@keyframes highway {
+  100% {
+    transform: translateX(-600px);
+  }
+}
+
+@keyframes car {
+  from {
+    transform: rotate(180px);
+  }
+
+  to {
+    transform: translateY(5px);
+  }
+}
+
+.Dragon {
+  position: absolute;
+  top: 70px;
+
+  animation-name: Dragon;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes Dragon {
+  100% {
+    transform: translateX(30px) translateY(10px);
+  }
+}
+
+.fire {
+  height: 100px;
+  width: 140px;
+  position: absolute;
+  left: 475px;
+  bottom: 400px;
+
+  animation-name: fire;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.fire img {
+  width: 100%;
+}
+
+@keyframes fire {
+  0% {
+    opacity: 0;
+    /* left: 100%; */
+  }
+  100% {
+    transform: translateX(30px) translateY(10px);
+  }
+}

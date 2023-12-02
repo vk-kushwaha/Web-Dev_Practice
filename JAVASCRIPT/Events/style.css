@@ -1,0 +1,24 @@
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    display: flex;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 1 px solid black;
+    margin: 2px;
+    color: red;
+}

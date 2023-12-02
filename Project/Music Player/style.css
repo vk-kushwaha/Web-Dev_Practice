@@ -1,0 +1,46 @@
+button {
+    border: 0;
+    background: none;
+}
+
+h1 {
+    font-size: 2rem;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+i {
+    font-size: 1.6rem;
+    color: azure;
+}
+
+#progress {
+    cursor: pointer;
+}
+
+#container {
+
+    width: 400px;
+    height: 450px;
+    margin: 50px auto;
+    text-align: center;
+    border: 5px solid black;
+    position: relative;
+    background-image: url(https://imgs.search.brave.com/mCzqsGu_gQO1ZzX1Qs8hs-kw5CEqq7kQNzPu4d7teX0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjg1/MTExOTk4L3Bob3Rv/L3lvdW5nLWdpcmwt/ZGFuY2luZy10by10/aGUtbXVzaWMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVhB/OFhHNUZ5Z2UxZVIt/NjlGZVJiWHdJajdt/VmduaHJUTERiOVRK/aHhiMjQ9);
+}
+
+.play-section {
+    position: absolute;
+    bottom: 0;
+    padding: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icons {
+    width: 360px;
+    padding: 10px 0;
+}

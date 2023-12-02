@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="test.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <li class="brand">
+                <img src="./Assets/spotify logo.png" alt="spotify logo" />Spotify
+            </li>
+            <li class="tag">Favourites</li>
+
+            <div class="nav-search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <input placeholder="Search.." class="search-input" />
+                <div class="mic-icon">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+
+            <div class="bell-icon">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="user-logo">
+                <img src="./Assets/Login.jpg" alt="logo" />
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-container">
+                <div class="song-item">
+                    <img src="./Assets/70.jpg" alt="song" />
+                    <img src="./Assets/80.jpg" alt="song" />
+                    <img src="./Assets/90.jpg" alt="song" />
+                </div>
+
+                <section class="latest-release">Latest Release </section>
+                <div class="scroller">
+                    <div class="song-list">
+                        <a href=""><img src="./Assets/Jalsa.jpg" alt="" />
+                            <i class="fa-solid fa-play fa-3x" style="color: #ffffff;"></i>
+                        </a>
+
+                        <div class="A">
+                            <div class="text">
+                                <p>Jalsa 2.0</p>
+                                <p>Satinder Sartaaj</p>
+                                <p>20 July 2023</p>
+                            </div>
+                            <div class="data">
+                                <p>...</p>
+                                <p>03:16</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="song-list">
+                        <a href=""><img src="./Assets/Rocky & Rani.webp" alt="" />
+                            <i class="fa-solid fa-play fa-3x" style="color: #ffffff;"></i>
+                        </a>
+                        <div class="A">
+                            <div class="text">
+                                <p>Tum Kya Mile </p>
+                                <p>Arijit Singh</p>
+                                <p>12 July 2023</p>
+                            </div>
+                            <div class="data">
+                                <p>...</p>
+                                <p>03:12</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroller">
+                    <div class="song-list">
+                        <a href=""><img src="./Assets/oonchi oonchi wadi.webp" alt="" />
+                            <i class="fa-solid fa-play fa-3x" style="color: #ffffff;"></i>
+                        </a>
+                        <div class="A">
+                            <div class="text">
+                                <p>Oonchi Oonchi Waadi</p>
+                                <p>Hansraj Raghuwanshi</p>
+                                <p>11 August 2023</p>
+                            </div>
+                            <div class="data">
+                                <p>...</p>
+                                <p>03:58</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="song-list">
+                        <a href=""><img src="./Assets/Udd Jaa Kaale Kaava.webp" alt="" />
+                            <i class="fa-solid fa-play fa-3x" style="color: #ffffff;"></i>
+                        </a>
+                        <div class="A">
+                            <div class="text">
+                                <p>Udd Jaa Kaale Kava</p>
+                                <p>Udit Narayan</p>
+                                <p>12 June 2023</p>
+                            </div>
+                            <div class="data">
+                                <p>...</p>
+                                <p>04:48</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroller">
+                    <div class="song-list">
+                        <a href="">
+                            <img src="./Assets/Sahibaa.webp" alt="" />
+                            <i class="fa-solid fa-play fa-3x" style="color: #ffffff;"></i>
+                        </a>
+                        <div class="A">
+                            <div class="text">
+                                <p>Sahibaa</p>
+                                <p>Pritam,Darshan Raval</p>
+                                <p>10 July 2023</p>
+                            </div>
+                            <div class="data">
+                                <p>...</p>
+                                <p>03:56</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="song-list">
+                        <a href=""><img src="./Assets/Selfiyaan.jpg" alt="" />
+                            <i class="fa-solid fa-play fa-3x" style="color: #ffffff;"></i>
+                        </a>
+                        <div class="A">
+                            <div class="text">
+                                <p>Selfiyaan</p>
+                                <p>Gayatri Chaudhary</p>
+                                <p>20 April 2023</p>
+                            </div>
+                            <div class="data">
+                                <p>...</p>
+                                <p>02:51</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <p>
+                <h1>Popular Artists</h1>
+                </p>
+                <div class="wrapper">
+                    <div class="scrolls">
+
+                        <div id="slider4" class="text-center">
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Anne-Marie.jpeg" alt="1">
+                                <p>Anne Marie</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Dua Lipa..jpeg" alt="1">
+                                <p>Dua Lipa</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Ariana Grande.jpeg" alt="1">
+                                <p>Ariana Grande</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Ed Sheeran..jpeg" alt="1">
+                                <p>Ed Sheeran</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Harry Styles. jpeg" alt="1">
+                                <p>Harry Styles</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Justine.jpeg" alt="1">
+                                <p>Justine</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Miley Cyrus.webp" alt="1">
+                                <p>Miley Cyrus</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Quora jpeg" alt="1">
+                                <p>Quora</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Rihanna..webp" alt="1">
+                                <p>Rihanna</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Stormzy.jpeg" alt="1">
+                                <p>Stormzy</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Taylor-Swift.jpeg" alt="1">
+                                <p>Taylor Swift</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Billie Eilish.jpeg" alt="1">
+                                <p>Billie Eilish</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Shawn Mendes.jpeg" alt="1">
+                                <p>Shawn Mendes</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Selena Gomez.jpeg" alt="1">
+                                <p>Selena Gomez</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Lady Gaga.jpeg" alt="1">
+                                <p>Lady Gaga</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="scrolls">
+
+                        <div id="slider4" class="text-center">
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Music.webp" alt="1">
+                                <p></p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Neha-Kakkar.jpg" alt="1">
+                                <p>Neha Kakkar</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Sonu-Nigam.jpg" alt="1">
+                                <p>Sonu Nigam</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/palak-muchhal.webp" alt="1">
+                                <p>Palak muchhal</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Ayushmann Khurrana jpeg" alt="1">
+                                <p>Ayushmann Khurrana</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Vaishali-Mhade.webp" alt="1">
+                                <p>Vaishali Mhade</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/A R rahman jpeg" alt="1">
+                                <p>A R rahman</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/asha1_.jpg" alt="1">
+                                <p>Asha Bhoshle</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/sunidhi_chauhan.jpg" alt="1">
+                                <p>sunidhi_chauhan</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Sukhwinder-Singh.jpg" alt="1">
+                                <p>Sukhwinder Singh</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Shreya-Ghoshal-1.jpg" alt="1">
+                                <p>Shreya Ghoshal</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Shaan.jpg" alt="1">
+                                <p>Shaan</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Parampara-Thakur.webp" alt="1">
+                                <p>Parampara Thakur</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Badshah jpeg" alt="1">
+                                <p>Badshah</p>
+                            </div>
+                            <div class="slide-img">
+                                <img class="slide-img" src="./Assets/Jubin-Nautiyal.webp" alt="1">
+                                <p>Jubin Nautiyal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                <h2>Latest English</h2>
+                </p>
+                <div class="wrapper">
+                    <div class="scrolls">
+                        <div id="slider4" class="text-center">
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Love-Me-Like-You-Dojpg" alt="1">
+                                <p>Love Me Like You Do </p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/sleepless-nights.jpg" alt="1">
+                                <p>Sleepless Nights </p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Desperado-English.jpg" alt="1">
+                                <p>Desperado </p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Single-Soon.jpg" alt="1">
+                                <p>Single Soon</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Until-I-Found-You.jpg" alt="1">
+                                <p>Until I Found You </p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Selfish-Love.jpg" alt="1">
+                                <p>Selfish Love</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Ed Sheeran..jpeg" alt="1">
+                                <p>Shape Of You</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/See-You-Again.jpg" alt="1">
+                                <p>See You Again</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/On-My-Way.jpg" alt="1">
+                                <p>On My Way</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Let-Me-Down-Slowly.jpg" alt="1">
+                                <p>Let Me Down Slowly</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Calm-Down.jpg" alt="1">
+                                <p>Calm Down</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Rare.jpg" alt="1">
+                                <p>Rare</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                <h2>Latest Hindi</h2>
+                </p>
+                <div class="wrapper">
+                    <div class="scrolls">
+                        <div id="slider4" class="text-center">
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Oonchi-Oonchi-Deewarein.jpg" alt="1">
+                                <p>Onchi Onchi Deewaren</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Jawan.jpg" alt="1">
+                                <p>Jawan</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Mashoor.jpg" alt="1">
+                                <p>Mashoor</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Pyaar-Hai-Toh-Hai.jpg" alt="1">
+                                <p>Pyaar Hai Toh Hai</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/The-Great-Indian-Family.jpg" alt="1">
+                                <p>The Great Indian Family </p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Simroon-Tera-Naam.jpg" alt="1">
+                                <p>Simroon Tera Naam </p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Suhe-Ve.jpg" alt="1">
+                                <p>Suhe Ve</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Mark-Antony.jpg" alt="1">
+                                <p>Mark Antony</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Saaya-Tera.jpg" alt="1">
+                                <p>Saaya Tera</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Chaleya.jpg" alt="1">
+                                <p>Chaleya </p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Chandni.jpg" alt="1">
+                                <p>Chandni</p>
+                            </div>
+                            <div class="slider-img">
+                                <img class="slider-img" src="./Assets/Heeriye.jpg" alt="1">
+                                <p>Heeriye</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /** Left container clossing**/ -->
+
+            <!-- Right container opening  -->
+            <div class="right-container">
+                <div class="all">
+                    <div class="queue-header">
+                        <div>Queue</div>
+                        <div></div>
+                        <div class="drop">Queue<i class="fa-solid fa-caret-down" style="color: skyblue"></i> </div>
+                    </div>
+                    <div class="queue-1">
+                        <span>01</span>
+                        <div class="all-1"><img src="./Assets/Heeriye.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Heeriye</p>
+                            <p id="name">Arijit Singh </p>
+                        </div>
+                    </div>
+                    <div class="queue-i"><i class="fa-regular fa-heart" style="color: white ;"></i></div>
+
+                    <div class="queue-1">
+                        <span>02</span>
+                        <div class="all-1"><img src="./Assets/Chaleya.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Chaleya</p>
+                            <p id="name">Arijit Singh</p>
+                        </div>
+                        <div class="queue-i"><i class="fa-regular  fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>03</span>
+                        <div class="all-1"><img src="./Assets/Gadar-2-Hindi-.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Gadar 2</p>
+                            <p id="name">Uttam Singh </p>
+                        </div>
+
+                        <div class="queue-i"><i class="fa-regular fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>04</span>
+                        <div class="all-1"><img src="./Assets/Bhula-Du.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Bhula Du</p>
+                            <p id="name">Sayeed Qadari</p>
+                        </div>
+                        <div class="queue-i"><i class="fa-regular  fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>05</span>
+                        <div class="all-1"><img src="./Assets/Simroon-Tera-Naam.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Simroon Naam Tera</p>
+                            <p id="name">Sachet Tondon </p>
+                        </div>
+
+                        <div class="queue-i"><i class="fa-regular fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>06</span>
+                        <div class="all-1"><img src="./Assets/Guli-Mata.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Guli-Mata</p>
+                            <p id="name">Shreya Ghoshal</p>
+                        </div>
+                        <div class="queue-i"><i class="fa-regular  fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>07</span>
+                        <div class="all-1"><img src="./Assets/Chandni.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Chandni</p>
+                            <p id="name">Sachet Tondon </p>
+                        </div>
+
+                        <div class="queue-i"><i class="fa-regular fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>08</span>
+                        <div class="all-1"><img src="./Assets/Baarishen.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Baarishen</p>
+                            <p id="name">Ankit Tiwari</p>
+                        </div>
+                        <div class="queue-i"><i class="fa-regular  fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>09</span>
+                        <div class="all-1"><img src="./Assets/Nasha.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Nasha</p>
+                            <p id="name">Badshah </p>
+                        </div>
+
+                        <div class="queue-i"><i class="fa-regular fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>10</span>
+                        <div class="all-1"><img src="./Assets/Shahibaa.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Shahibaa</p>
+                            <p id="name">Pritam, Antara</p>
+                        </div>
+                        <div class="queue-i"><i class="fa-regular  fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>11</span>
+                        <div class="all-1"><img src="./Assets/Raabta.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Raabta</p>
+                            <p id="name">Jubin Nautiyal </p>
+                        </div>
+
+                        <div class="queue-i"><i class="fa-regular fa-heart" style="color: white ;"></i></div>
+                    </div>
+                    <div class="queue-1">
+                        <span>12</span>
+                        <div class="all-1"><img src="./Assets/Thumka.jpg" alt="" /> </div>
+                        <div>
+                            <p id="song">Thumka</p>
+                            <p id="name">Pritam, Sunidhi</p>
+                        </div>
+                        <div class="queue-i"><i class="fa-regular  fa-heart" style="color: white ;"></i></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/99ee89fbfd.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

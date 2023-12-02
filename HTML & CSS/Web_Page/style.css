@@ -1,0 +1,89 @@
+*{
+    margin 0;
+    padding 0;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: aliceblue;
+}
+
+header{
+    background-color: #333;
+    color: #fff;
+    min-height: 50px;
+    padding: 5px, 20px;
+}
+
+nav ul {
+
+    display: flex ;
+    flex-grow: 1;
+    padding: 15px;
+    justify-content: space-around;
+    list-style:none;
+   
+    
+}
+
+a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+main{
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero{
+    text-align: center;
+    padding: 40px 0;
+}
+.hero h1{
+    font-size: 35px;
+    margin-bottom:20px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(3, 98, 98);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: ease;
+}
+
+.btn:hover{
+    background-color: #104bbf;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.Features{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.Feature{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgb(186, 182, 182);
+    text-align: center;
+
+}
+
+footer{
+    text-align:  center;
+    font-size: 10px;
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 5px 0;
+}
+

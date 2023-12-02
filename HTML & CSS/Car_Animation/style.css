@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.animation{
+
+    height: 100vh;
+    width: 150%;
+    background-image: url(./Assets/sky.jpg);
+}
+
+.highway{
+    background-image: url(./Assets/road.jpg);
+    height: 200px;
+    position: absolute; 
+    bottom: 0px;
+    width: 150%;
+
+    animation-name: highway;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+.city{
+    background-image: url(./Assets/city.png);
+    height: 250px;
+    position: absolute;
+    bottom: 200px;
+    width: 200%;
+
+    animation-name: city;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.car{
+    
+    width: 500px;
+    position: absolute;
+    bottom: 50px;
+    left: 30%;
+
+    animation-name: car;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+        
+}
+
+.car img{
+    width: 100%;
+}
+
+.wheel{
+
+    position: absolute;
+    bottom: 87px;
+    left: 100px;
+
+}
+
+.wheel img{
+
+    width: 70px;
+    height: 70px;
+
+    animation-name: wheel;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wheel {
+    100%{
+        transform:rotate(360deg);
+    }
+    
+}
+
+.front-wheel{
+
+    position: absolute;
+    left: 805px;
+    bottom: 0;
+
+}
+
+.back-wheel{
+
+    position: absolute;
+        left: 565px;
+        bottom: 0;
+}
+
+
+@keyframes city {
+    100%{
+        transform: translateX(-600px);
+    }
+    
+}
+
+@keyframes highway {
+
+    100%{
+
+        transform: translateX(-600px);
+    }
+    
+}
+
+@keyframes car {
+    from{
+        transform: translateY(0px);
+    }   
+    to{
+        transform: translateY(5px);
+    } 
+}
+
+.superman{
+    position: absolute;
+    top: 200px;
+
+    animation-name: superman;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes superman {
+
+    100%{
+        transform: translateX(1800px);
+    }
+    
+}
+

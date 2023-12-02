@@ -1,0 +1,13 @@
+h1{
+    color: chocolate;
+    
+}
+
+p{
+    color: orchid;
+    font-style:italic;
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(238, 226, 226);
+    border: 2px;
+}
