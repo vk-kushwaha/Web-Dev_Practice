@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+}
+
+body,
+html {
+  background-color: #181818;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 3.5rem;
+}
+
+.logo img {
+  padding-left: 50px;
+  margin-top: 8px;
+  height: 40px;
+  width: 120px;
+}
+
+.menu {
+  padding-right: 40px;
+  margin: 10px;
+}
+
+#login {
+  margin: 10px;
+  background-color: red;
+  color: white;
+  border: 0;
+  width: 90px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+#signin {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  width: 80px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.horizontal-row-container {
+  padding: 10px;
+  display: flex;
+}
+
+.horizontal-row-item {
+  margin: 6px;
+}
+
+.collection-title-name {
+  color: white;
+}
+
+.collection-row {
+  padding-left: 40;
+}
+
+main {
+  padding-left: 40px;
+  padding-top: 60px;
+}
+
+.collections {
+  margin: 40px;
+  padding: 15px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "collections-title ";
+}
+
+.collections-title {
+  font-size: 40px;
+}
+
+.collections-synopsis {
+  font-size: 20px;
+}
