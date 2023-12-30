@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Edit comment form</h1>
+    <form action="/comment/<%= foundcomment.id %>?_method = PATCH" method="POST">
+<!-- <label for="naam">name</label>
+<input type="text" name="name" id="naam"> -->
+
+<label for="content">comment</label>
+<textarea name="comment" id="content" cols="40" rows="10"><%= foundcomment.comment%></textarea>
+<button type="submit">Edit comment</button>
+
+    
+</body>
+</html>
