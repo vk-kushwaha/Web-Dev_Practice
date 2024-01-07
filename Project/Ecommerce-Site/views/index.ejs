@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/star.css">
+  </head>
+  <body>
+    <h1>Display all the products</h1>
+
+    <%for (const item of products) {%>
+
+    <h1><%=item.name%></h1>
+    <img src="<%=item.img%>" alt="" />
+    <h3><%=item.price%></h3>
+    <p><%=item.desc%></p>
+    <a href="/products/<%=item._id%>"> Show This</a>
+    <a href="/products/<%=item._id%>/edit"> Edit This</a>
+
+    <form action="/products/<%=item._id%>?_method=DELETE" method="POST">
+      <button>Delete</button>
+    </form>
+    <% }%>
+  </body>
+</html>

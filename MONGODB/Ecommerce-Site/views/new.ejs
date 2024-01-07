@@ -1,0 +1,31 @@
+<%-include('./partials/header')%> 
+
+
+<div class="form">
+    <h1>New product Entry</h1>
+    <form  action="/products" method="POST">
+        <div>
+            <label for="naam">Name: </label>
+            <input type="text" name="name" id="naam">
+        </div>
+        <div>
+            <label for="pic">Image: </label>
+            <input type="text" name="img" id="pic">
+        </div>
+        <div>
+            <label for="daam">Price: </label>
+            <input type="text" name="price" id="daam">
+        </div>
+        <div>
+            <label for="details">Description: </label>
+            <textarea name="desc" id="details"  rows="3"></textarea>
+            <div>
+                <button type="submit">Add Product</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<%-include('./partials/footer')%> 

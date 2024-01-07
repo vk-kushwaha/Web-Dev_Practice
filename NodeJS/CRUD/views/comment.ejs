@@ -12,7 +12,8 @@
     <h1><%=item.id %></h1>
     <h3><%=item.name %></h3>
     <p><%=item.comment %></p>
-
+    <form action="/comment/<%=item.id%>?_method=DELETE" method="POST"></form>
+    <button type="submit">Delete</button>
     <%}%>
   </body>
 </html>

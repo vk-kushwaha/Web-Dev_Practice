@@ -73,12 +73,18 @@ app.get("/comment/:idno/edit", (req, res) => {
 
 app.patch("/comment/:idno", (req, res) => {
   let { idno } = req.params;
-  foundcomment = arr.find((comment) => {
-    return comment.id === parseInt(idno);
-  });
-
+  foundcomment = arr.find((comment) => {return comment.id === parseInt(idno); 
+  })
   let { comment } = req.body;
   foundcomment.comment = comment;
+  res.redirect("/comment");
+});
+
+app.delete("/comment/:idno", (req, res) => {
+  let { idno } = req.params;
+  let newComment = arr.filter((comment) => {return comment.id != idno;
+  })
+  arr= newComment;
   res.redirect("/comment");
 });
 app.listen("8080", () => {

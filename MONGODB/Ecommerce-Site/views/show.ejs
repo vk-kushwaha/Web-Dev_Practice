@@ -1,0 +1,37 @@
+<%-include('./partials/header')%>
+<section class="row">
+    <h1>Show a perticular Product</h1>
+    <div class="col-6 border">
+        <h1><%= foundProduct.name%></h1>
+        <img src="<%=foundProduct.img %>" alt="">
+        <h2>Price:<%=foundProduct.price %>/-</h2>
+        <p><%=foundProduct.desc%></p>
+    </div>
+
+    <div class="col-6 border">
+        <h1>Rating form</h1>
+        <form action="/products/<%=foundProduct._id%>/rating" method="POST">
+            <label for="star">Rating:</label>
+            <input type="range"  min="0" max="5" name="rating"  id="star">
+            <br>
+            <label for="textt">Rating:</label>
+            <textarea name="comment" id="textt" rows="3"></textarea>
+            <br>
+            <button type="submit">ADD REVIEW</button>
+            
+        </form>
+    </div>
+
+    <div>
+        <% for (const review of foundProduct.reviews) {%>
+
+            <h2>Rating: <%= review.rating%></h2>
+            <h5>Comment: <%=review.comment%></h5>
+        <%}%>
+
+    </div>
+
+</section>
+    
+
+<%-include('./partials/footer')%>
