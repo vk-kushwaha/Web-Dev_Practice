@@ -1,31 +1,78 @@
-<%-include('./partials/header')%> 
+<%-include('./partials/header')%>
+<%-include('./partials/Navbar')%> 
+    
 
-
-<div class="form">
-    <h1>New product Entry</h1>
-    <form  action="/products" method="POST">
-        <div>
-            <label for="naam">Name: </label>
-            <input type="text" name="name" id="naam">
+    <form  action="/products" method="POST" class=" needs-validation  col-4 mt-5 p-5" novalidate>
+        <div class="input-group mb-3">
+            <h1>New product Entry</h1>
         </div>
-        <div>
-            <label for="pic">Image: </label>
-            <input type="text" name="img" id="pic">
-        </div>
-        <div>
-            <label for="daam">Price: </label>
-            <input type="text" name="price" id="daam">
-        </div>
-        <div>
-            <label for="details">Description: </label>
-            <textarea name="desc" id="details"  rows="3"></textarea>
-            <div>
-                <button type="submit">Add Product</button>
+        <div class="input-group mb-3">
+            <label for="naam" class="input-group-text">Product Name: </label>
+            <input type="text" class="form-control" name="name" id="naam" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div  id="validationServer03Feedback" class="invalid-feedback">    
+                Please Enter Product Name.
             </div>
         </div>
+       
+        <div class="input-group mb-3">
+            <label for="imge" class="input-group-text">Image Url: </label>
+            <input type="text" class="form-control" name="img" id="imge" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServer03Feedback" class="invalid-feedback">
+                Please Enter Product Price.
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <label for="paisa" class="input-group-text">Product Price: </label>
+            <input type="number" class="form-control" name="price" id="paisa" required>
+            <span class="input-group-text">&#8377</span>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServer03Feedback" class="invalid-feedback">
+                Please Enter Product Price.
+            </div>
+        </div>
+        
+        <div class="input-group">
+            <label for="des" class="input-group-text">Description: </label>
+            <textarea class="form-control" name="desc" id="des" rows="5" required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServer03Feedback" class="invalid-feedback">
+                Please Enter Product Price.
+            </div>
+        </div>
+
+        <button class=" mt-2 btn btn-success " type="submit">Add Product</button>
+        
     </form>
-</div>
 
-
-
+  <script>
+    (() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+  </script>
 <%-include('./partials/footer')%> 

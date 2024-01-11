@@ -1,29 +1,45 @@
 <%-include('./partials/header')%>
+<%-include('./partials/Navbar')%>
 
-<div class="form">
-    <h1>Edit the product Entry</h1>
-    <form  action="/products/<%=foundProduct._id%>?_method=PATCH" method="POST">
-        <div>
-            <label for="naam">Name: </label>
-            <input type="text" name="name" id="naam" value="<%=foundProduct.name%>">
-        </div>
-        <div>
-            <label for="pic">Image: </label>
-            <input type="text" name="img" id="pic" value="<%=foundProduct.img%>">
-        </div>
-        <div>
-            <label for="daam">Price: </label>
-            <input type="text" name="price" id="daam" value="<%=foundProduct.price%>">
-        </div>
-        <div>
-            <label for="details">Description: </label>
-            <textarea name="desc" id="details"  rows="3"><%=foundProduct.desc%></textarea>
-            <div>
-                <button type="submit">Edit Product</button>
-            </div>
-        </div>
-    </form>
-</div>
 
+<form class="needs-validation position-absolute bottom-50 end-50 border p-2" action="/products/<%=foundProduct._id%>?_method=PATCH" method="POST"  novalidate>
+    <h1>Edit product Entry</h1>
+    <br>
+    <div class="input-group mb-3">
+        <span class="input-group-text">Product Name</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"value="<%=foundProduct.name%>" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please choose a username.
+        </div>
+    </div>
+   
+    <div class="input-group mb-3">
+        <span class="input-group-text">Product Image</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"value="<%=foundProduct.img%>">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">Product Price</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"value="<%=foundProduct.price%>" required>
+        <span class="input-group-text">&#8377</span>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please choose a username.
+        </div>
+    </div>
+    
+    <div class="input-group">
+        <span class="input-group-text">Description</span>
+        <textarea class="form-control" aria-label="With textarea" rows="3"><%=foundProduct.desc%></textarea>
+    </div>
+
+    <button class=" mt-2 btn btn-success " type="submit">Edit Product</button>
+    
+</form>
 
 <%-include('./partials/footer')%>

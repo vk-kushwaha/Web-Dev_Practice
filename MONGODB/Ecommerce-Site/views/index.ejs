@@ -1,21 +1,26 @@
 
 <%-include('./partials/header')%>    
+<%-include('./partials/Navbar')%>    
 
-    <h1>Showing all products</h1>
-
-    <%for (const item of products) {%>
-       <h1><%= item.name%></h1>
-       <img src="<%= item.img %>" alt="">
-       <h2>Price:<%= item.price %>/-</h2>
-       <p><%=item.desc%></p>
-
-       <a href="/products/<%= item._id%>">show This</a>
-       <a href="/products/<%= item._id%>/edit">Edit This</a>
-        
-       <form action="/products/<%= item._id%>/delete?_method=DELETE" method="POST">
-        <button>Delete</button>
-       </form>
-
-    <%}%>
+      <div class="row mt-5">
+        <h1>Showing all products</h1>
+    
+        <% for(let item of products){ %>
+    
+            <div class="col-lg-4 product-card">
+                <div class="card text-center shadow mt-3 mx-auto" style="width: 19rem;">
+                    <img class="img" src="<%=item.img%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"> <%= item.name %> </h3>
+                      <h5 class="card-title"> Rs: <%= item.price %> </h5>
+                      <p class="card-text"> <%= item.desc %> </p>
+                      <a href="/products/<%=item._id%>" class="btn btnn btn-primary">View Product</a>
+                      <a href="/products/<%=item._id%>/delete" class="btn btnn btn-danger">Delete Product</a>
+                    </div>
+                </div>
+            </div>
+            
+        <% } %>
+    </div>
     
 <%-include('./partials/footer')%>
