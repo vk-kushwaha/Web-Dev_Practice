@@ -1,28 +1,15 @@
 
-/* *{
-  padding: 0;
-  margin: 0;
-} */
-p{
+.heading{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
-  
+  /* font-size: 0px; */
+  text-align: center;
+  text-decoration: underline;
 }
-
-a{
-  color: white;
-}
-
 
 img{
 
-  height: 20rem;
+  height: 19rem;
   width: 19rem;
 }
 
-/* .form{
-  height: 350px;
-  width: 450px;
-  border: 1px solid black;
-
-} */

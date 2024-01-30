@@ -1,13 +1,13 @@
-<%-include('./partials/header')%>
-<%-include('./partials/Navbar')%> 
-    
+<%-include('../partials/header')%>    
+<%-include('../partials/Navbar')%>
+<%-include('../partials/flash')%>   
 
-    <form  action="/products" method="POST" class=" needs-validation  col-4 mt-5 p-5" novalidate>
+    <form  action="/products" method="POST" class=" needs-validation  col-4 mx-auto mt-5 p-5" novalidate>
         <div class="input-group mb-3">
-            <h1>New product Entry</h1>
+            <h1> Add New product </h1>
         </div>
         <div class="input-group mb-3">
-            <label for="naam" class="input-group-text">Product Name: </label>
+            <label for="naam" class="input-group-text"> <b>Product Name:</b> </label>
             <input type="text" class="form-control" name="name" id="naam" required>
             <div class="valid-feedback">
                 Looks good!
@@ -18,7 +18,7 @@
         </div>
        
         <div class="input-group mb-3">
-            <label for="imge" class="input-group-text">Image Url: </label>
+            <label for="imge" class="input-group-text"><b>Image Url:</b> </label>
             <input type="text" class="form-control" name="img" id="imge" required>
             <div class="valid-feedback">
                 Looks good!
@@ -29,9 +29,9 @@
         </div>
 
         <div class="input-group mb-3">
-            <label for="paisa" class="input-group-text">Product Price: </label>
+            <label for="paisa" class="input-group-text"><b>Product Price:</b> </label>
             <input type="number" class="form-control" name="price" id="paisa" required>
-            <span class="input-group-text">&#8377</span>
+            <span class="input-group-text"><b>&#8377 </b></span>
             <div class="valid-feedback">
                 Looks good!
             </div>
@@ -41,7 +41,7 @@
         </div>
         
         <div class="input-group">
-            <label for="des" class="input-group-text">Description: </label>
+            <label for="des" class="input-group-text"><b>Description:</b> </label>
             <textarea class="form-control" name="desc" id="des" rows="5" required></textarea>
             <div class="valid-feedback">
                 Looks good!
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <button class=" mt-2 btn btn-success " type="submit">Add Product</button>
+        <button class=" mt-3 btn btn-success " type="submit">Add Product</button>
         
     </form>
 
@@ -75,4 +75,4 @@
     })
   })()
   </script>
-<%-include('./partials/footer')%> 
+<%-include('../partials/footer')%> 

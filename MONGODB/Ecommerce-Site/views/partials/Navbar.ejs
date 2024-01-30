@@ -1,23 +1,98 @@
-<nav class="navbar fixed-top navbar-expand-lg "style="background-color: #007885;">
-    <div class="container">
-      <a class="navbar-brand" href="#">Shopping Cart</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/products">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/products/new">New</a>
-          </li>
-          
-        </ul>
-        <form class="d-flex" role="search">
-          <a class="mx-2" href="/login"><button class="btn btn-outline-info" type="submit">Login</button></a>
-          <a class="mx-2" href="/logout"><button class="btn btn-outline-info" type="submit">Logout</button></a>
-        </form>
+<nav class="navbar navbar-expand-lg" style="background-color: #007885;">
+  <div class="container">
+    <a href="#" class="nav-link" style="color: aliceblue;"
+      ><i class="p-2 fa-solid fa-2x fa-bag-shopping"></i
+    ></a>
+    <a
+      class="navbar-brand"
+      style="color: aliceblue; font-weight: 700;"
+      href="/home"
+      >ShopSphere
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 100px;"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link fw-bold py-1 px-2"
+            style="color: aliceblue;"
+            aria-current="page"
+            href="/home"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fw-bold py-1 px-2"
+            style="color: aliceblue;"
+            aria-current="page"
+            href="/products"
+            >Products</a
+          >
+        </li>
+        <li class="nav-item">
+          <%if(currentUser && currentUser.role === "seller") {%>
+          <a
+            class="nav-link fw-bold py-1 px-2"
+            style="color: aliceblue;"
+            href="/products/new"
+            >New</a
+          >
+          <%}%>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fw-bold py-1 px-2"
+            style="color: aliceblue;"
+            href="/contact"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+      <div class="d-flex" role="search">
+        <%if(!currentUser){%>
+        <a class="mx-2" href="/login"
+          ><button
+            class="btn btn-outline-info"
+            style="color: aliceblue;"
+            type="submit"
+          >
+            Login
+          </button></a
+        >
+        <%}else{%>
+        <a
+          href="#"
+          class="p-2 nav-link text-capitalize"
+          style="color: aliceblue; font-weight: 500;"
+          >Hello <%=currentUser.username%></a
+        >
+        <a href="/user/cart" class="pt-2 nav-link" style="color: aliceblue;"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
+        <sup
+          ><span class="mt-2 badge bg-danger"
+            ><%=currentUser.cart.length%></span
+          ></sup
+        >
+        <a class="mx-2" style="color: aliceblue;" href="/logout"
+          ><button class="btn btn-outline-info" type="submit">Logout</button></a
+        >
+        <%}%>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>

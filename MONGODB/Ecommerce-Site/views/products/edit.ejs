@@ -1,0 +1,45 @@
+<%-include('../partials/header')%>    
+<%-include('../partials/Navbar')%>
+<%-include('../partials/flash')%>   
+
+
+<form class="needs-validation  col-4 mx-auto mt-5 p-5" action="/products/<%=foundProduct._id%>?_method=PATCH" method="POST"  novalidate>
+    <h1>Edit Product Details</h1>
+    <br>
+    <div class="input-group mb-3">
+        <label for="naam" class="input-group-text"> <b>Product Name:</b> </label>
+        <input type="text" class="form-control" name="name" id="naam" value="<%=foundProduct.name%>" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please choose a username.
+        </div>
+    </div>
+   
+    <div class="input-group mb-3">
+        <label for="imge" class="input-group-text"><b>Image Url: </b></label>
+        <input type="text" class="form-control" name="img" id="imge" value="<%=foundProduct.img%>" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <label for="paisa" class="input-group-text"><b>Product Price:</b> </label>
+            <input type="number" class="form-control" name="price" id="paisa" value="<%=foundProduct.price%>" required>
+        <span class="input-group-text"><b>&#8377 </b></span>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please choose a username.
+        </div>
+    </div>
+    
+    <div class="input-group">
+        <label for="des" class="input-group-text"><b>Description: </b></label>
+        <textarea class="form-control" name="desc" id="des" rows="5" required><%=foundProduct.desc%></textarea>
+    </div>
+    <button class=" mt-2 btn btn-success " type="submit">Edit Product</button>
+    
+</form>
+
+<%-include('../partials/footer')%>

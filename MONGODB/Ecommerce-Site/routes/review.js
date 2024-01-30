@@ -1,11 +1,11 @@
 const express = require('express')
 const Product = require('../model/Product')
 const Review= require('../model/Review');
-const { validatereview } = require('../middleware');
-
+const { validatereview,isLoggedIn } = require('../middleware');
 const router = express.Router();
 
-router.post('/products/:id/rating', validatereview, async (req , res)=>{
+
+router.post('/products/:id/rating',isLoggedIn, validatereview, async (req , res)=>{
     try{
         let {rating , comment} = req.body;
         let {id} = req.params;
@@ -16,9 +16,13 @@ router.post('/products/:id/rating', validatereview, async (req , res)=>{
 
         await product.save();
         await review.save();
+
+        //adding flash msgs
+        req.flash('success', 'Review added successfully!')
         res.redirect(`/products/${id}`)
     }
     catch(e){
+        
         res.render('error',{err:e.message})
     }
 })

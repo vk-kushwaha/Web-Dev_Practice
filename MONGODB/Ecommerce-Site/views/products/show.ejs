@@ -1,0 +1,82 @@
+<%-include('../partials/header')%>    
+<%-include('../partials/Navbar')%>
+<%-include('../partials/flash')%>   
+
+    <section class="container m-5 row p-5 mx-auto">
+        <h1 class="heading ">Show a particular Product</h1>
+        <br>
+    
+        <div class="row mt-3">
+            <div class=" col-md-6 border mb-4">
+                <h1><%= foundProduct.name %></h1>
+                <img src="<%= foundProduct.img %>" alt="Product Image" class="img-fluid">
+                <h2>Price: <%= foundProduct.price %>/-</h2>
+                <p><%= foundProduct.desc %></p>
+                <a href="/products/<%= foundProduct._id %>/buy" class="btn btnn btn-success">Buy <i class="fa-solid fa-bolt"></i></a>
+                
+                <form class="d-inline-block" action="/user/<%= foundProduct._id %>/add" method="POST">
+                    <button class="btn btnn btn-info">Add To Cart</button>
+                    
+                </form>
+                <% if(currentUser && currentUser.role === "seller") { %>
+                    <a href="/products/<%= foundProduct._id %>/edit" class="btn btnn btn-secondary">Edit</a>
+                    <form class="d-inline-block" action="/products/<%= foundProduct._id %>?_method=DELETE" method="POST">
+                        <button class="btn btnn btn-danger">Delete</button>
+                    </form>
+                <% } %>
+            </div>
+    
+            <div class="col-md-6 border">
+                <h1>Add Ratings</h1>
+                <form class="mt-3 border" action="/products/<%= foundProduct._id %>/rating" method="POST">
+                    <!-- <label for="star">Rating:</label> -->
+
+                    <!-- star rating input goes here -->
+                    
+                    <div class="">
+                        <!-- <label class="form-label" for="stars">Rating: </label> -->
+                        <fieldset class="starability-basic">
+                            <!-- <legend>First rating:</legend> -->
+                            <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                            <input type="radio" id="first-rate1" name="rating" value="1" />
+                            <label for="first-rate1" title="Terrible">1 star</label>
+                            <input type="radio" id="first-rate2" name="rating" value="2" />
+                            <label for="first-rate2" title="Not good">2 stars</label>
+                            <input type="radio" id="first-rate3" name="rating" value="3" />
+                            <label for="first-rate3" title="Average">3 stars</label>
+                            <input type="radio" id="first-rate4" name="rating" value="4" />
+                            <label for="first-rate4" title="Very good">4 stars</label>
+                            <input type="radio" id="first-rate5" name="rating" value="5" />
+                            <label for="first-rate5" title="Amazing">5 stars</label>
+                          </fieldset>
+                        <!-- <input class="form-control" type="range" min="0" max="5" id="stars" name="rating"> -->
+                    </div>
+
+                    <label for="textt">Comment:</label>
+                    <textarea name="comment" id="textt" rows="5" class="form-control"></textarea>
+                    <br>
+                    <button class="btn btn-success " type="submit">Submit</button>
+                </form>
+    
+                <div class="mt-2">
+                    <% for (const review of foundProduct.reviews) { %>
+                        <h3>Rating</h3>
+                        <h2 class="starability-result" data-rating="<%= review.rating %>">
+                            Rated: <%= review.rating %>
+                        </h2>
+                        <h5>Comment: <%= review.comment %></h5>
+                        <% if(review.createdAt){ %>
+                            <h5>Time: <%= review.createdAt.toDateString() %></h5>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        
+
+
+
+
+<%-include('../partials/footer')%>

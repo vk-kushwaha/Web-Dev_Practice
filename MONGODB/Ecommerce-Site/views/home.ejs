@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./CSS/home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <body class="d-flex h-100 text-center text-bg-dark">
+      <div>
+        <img class="bgimage" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""/>
+      </div>
+
+      <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+          <div>
+            <h3 class="float-md-start mb-0"><i class="p-2 fa-solid fa-bag-shopping"></i>ShopSphere</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+              <a class="nav-link fw-bold py-1 px-2 active" aria-current="page"  href="/home">Home</a>
+              <a class="nav-link fw-bold py-1 px-2" href="/products">Products</a>
+              <a class="nav-link fw-bold py-1 px-2" href="/contact">Contact Us</a>
+              <a class="nav-link fw-bold py-1 px-2" href="/register">Register Now</a>
+            </nav>
+          </div>
+        </header>
+
+        <main class="p-2">
+          <span class="Logo" href=""><img class="Logo"src="../CSS/Logo.png" alt=""/></span>
+          <h1 class="fw-bold">ShopSphere</h1>
+          <p class="fw-bold">"Your Ultimate Ecommerce Destination"</p>
+          <p class="lead">
+            "Welcome to ShopSphere — Your go-to destination for curated
+            collections, unbeatable deals, and the latest trends. Dive into a
+            seamless shopping experience where style meets convenience.
+            Discover, click, and elevate your shopping game with us!"
+          </p>
+          <p class="lead">
+            <a href="/products" class="btn btn-lg btn-light fw-bold border-white bg-white">Explore Now </a>
+          </p>
+        </main>
+
+        <footer class="mt-auto text-white-50">
+          <p>© 2024 ShopSphere. All rights reserved.</p>
+        </footer>
+      </div>
+      <script
+        src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+
+    <%-include('./partials/footer')%>
+  </body>
+</html>

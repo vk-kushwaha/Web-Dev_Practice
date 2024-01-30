@@ -1,0 +1,51 @@
+<%-include('../partials/header')%>
+<%-include('../partials/Navbar')%>
+<%-include('../partials/flash')%>
+
+
+    <div class="row" style="margin-top: 80px;">
+        <div class="col-6 mx-auto">
+            <h1 class="diplay-6">Sign-Up Form</h1>
+            <form  action="/register" method="POST" >
+                <div class="input-group mb-4">
+                    <label for="username" class="input-group-text">Username: </label>
+                    <input type="text" class="form-control" name="username" id="naam" placeholder="Enter username" required>
+                </div>
+            
+                <div class="input-group mb-4">
+                    <label for="mail" class="input-group-text">Email: </label>
+                    <input type="email" class="form-control" name="email" id="mail" placeholder="Enter Email Address" required>
+                </div>
+
+                <div class="input-group mb-4">
+                    <label for="gender" class="input-group-text">Gender: </label>
+                    <input type="text" class="form-control" name="gender" id="gender" placeholder="Enter Gender" required>
+                </div>
+
+                <div class="mb-3">
+                    <p class="mt-2">Want to register as?</p>
+                    <div>
+                        <label for="role" class="form-label">Buyer: </label>
+                        <input type="radio" class="form-check-input" name="role" id="role" placeholder="role of the user" value="buyer">
+                    </div>
+                    <div>
+                        <label for="role" class="form-label">Seller: </label>
+                        <input type="radio" class="form-check-input" name="role" id="role" placeholder="role of the user" value="seller">
+                    </div>
+                </div>
+
+                <div class="input-group mb-4">
+                    <label for="pass" class="input-group-text">Password: </label>
+                    <input type="password" class="form-control" name="password" id="pass" placeholder="Enter Password" required>
+                </div>
+            
+                <button class=" btn btn-success " type="submit">SignUp</button>
+                <p class="mt-2">Already have an account? <a href="./login">Login Now</a></p>
+                
+            </form>
+        </div>
+    </div>
+
+
+
+<%-include('../partials/footer')%>
