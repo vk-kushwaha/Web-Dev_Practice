@@ -3,13 +3,13 @@
 <%-include('../partials/Navbar')%>
 <%-include('../partials/flash')%>    
 
-    <div class="container-fluid m-5 row p-5 mx-auto">
+    <div class="container-fluid m-5 row p-5 mx-auto ">
         <h1 class="heading">Showing All Products</h1>
     
         <% for(let item of products){ %>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card">
-                <div class="card text-center shadow mt-3 mx-auto" style="width: 21rem;">
-                    <img class="img card-img-top" src="<%= item.img %>" alt="Product Image">
+            <div class="col-12 col-md-6 col-md-4 col-lg-3  product-card">
+                <div class="card text-center shadow mt-3 mx-auto  " style="width: 21rem;">
+                    <img class="img card-img-top " src="<%= item.img %>" alt="Product Image">
                     <div class="card-body">
                         <h3 class="card-title"> <%= item.name %> </h3>
                         <span class="btn like-btn" product-id="<%= item._id %>">

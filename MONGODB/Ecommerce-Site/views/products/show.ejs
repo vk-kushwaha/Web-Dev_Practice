@@ -7,7 +7,7 @@
         <br>
     
         <div class="row mt-3">
-            <div class=" col-md-6 border mb-4">
+            <div class=" col-md-6  mb-">
                 <h1><%= foundProduct.name %></h1>
                 <img src="<%= foundProduct.img %>" alt="Product Image" class="img-fluid">
                 <h2>Price: <%= foundProduct.price %>/-</h2>
@@ -21,14 +21,14 @@
                 <% if(currentUser && currentUser.role === "seller") { %>
                     <a href="/products/<%= foundProduct._id %>/edit" class="btn btnn btn-secondary">Edit</a>
                     <form class="d-inline-block" action="/products/<%= foundProduct._id %>?_method=DELETE" method="POST">
-                        <button class="btn btnn btn-danger">Delete</button>
+                        <button class="btn btnn btn-danger"><i class="fa-regular fa-trash-can p-1"></i>Delete</button>
                     </form>
                 <% } %>
             </div>
     
-            <div class="col-md-6 border">
-                <h1>Add Ratings</h1>
-                <form class="mt-3 border" action="/products/<%= foundProduct._id %>/rating" method="POST">
+            <div class="col-md-6 ">
+                <h1>Leave Your Reviews</h1>
+                <form class="mt-3" action="/products/<%= foundProduct._id %>/rating" method="POST">
                     <!-- <label for="star">Rating:</label> -->
 
                     <!-- star rating input goes here -->
@@ -60,13 +60,12 @@
     
                 <div class="mt-2">
                     <% for (const review of foundProduct.reviews) { %>
-                        <h3>Rating</h3>
                         <h2 class="starability-result" data-rating="<%= review.rating %>">
                             Rated: <%= review.rating %>
                         </h2>
                         <h5>Comment: <%= review.comment %></h5>
                         <% if(review.createdAt){ %>
-                            <h5>Time: <%= review.createdAt.toDateString() %></h5>
+                            <h5>Date: <%= review.createdAt.toDateString() %></h5>
                         <% } %>
                     <% } %>
                 </div>
