@@ -15,15 +15,16 @@ function AllQuotes() {
   },[]);
 
   return (
-    <div>
-      <h1>AllQuotes</h1>
-      <ul>
-        {quotes.map((quote, index) =>{
-          return (<Quotes  id={quote._id} key = {quote._id}text= {quote.text}  author= {quote.author}/>  )
-        })}
-      </ul>
-      
-    </div>
+    <>
+     <h1 className="card-header d-flex justify-content-center  "> AllQuotes</h1>
+      <div className="container " >
+        <div className="">
+          {quotes.map((quote, index) =>{
+            return (<Quotes  id={quote._id} key = {quote._id}text= {quote.text}  author= {quote.author}/>  )
+          })}
+        </div>
+      </div> 
+    </>
   )
 }
 

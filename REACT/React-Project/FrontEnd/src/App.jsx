@@ -4,6 +4,7 @@ import NewQuotes from './Components/Pages/NewQuotes'
 import MainNav from './Components/MainNav/MainNav'
 import { Route, Routes } from 'react-router-dom'
 import ShowQuotes from './Components/Pages/ShowQuotes'
+import Home from './Components/Pages/Home'
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
 
     <main>
       <Routes>
-      <Route path='/' element={<AllQuotes/>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/allquotes' element={<AllQuotes/>}/>
       <Route path='/new' element={<NewQuotes/>}/>
       <Route path='/quote/:id' element={<ShowQuotes/>}/>
 

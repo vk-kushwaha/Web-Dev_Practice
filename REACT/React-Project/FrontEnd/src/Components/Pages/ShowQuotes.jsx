@@ -17,8 +17,14 @@ function ShowQuotes() {
     },[]);
   return (
     <div>
+      <div className="container  mt-4 p-4 col-6 border">
+        <div className="card-body d-flex justify-content-center">
         <h2>{quote.text}</h2>
-        <p>{quote.author}</p>
+        </div>
+        <div className="card-body d-flex justify-content-end">
+        <h3>{quote.author}</h3>
+        </div>
+      </div>
     </div>
   )
 }
