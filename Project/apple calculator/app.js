@@ -3,6 +3,7 @@ let input = document.getElementById('input');
 let buttons = document.querySelectorAll('button');
 let string = "";
 
+
 let arr = Array.from(buttons);
 arr.forEach(buttons => {
     buttons.addEventListener('click', (event) => {
@@ -20,7 +21,43 @@ arr.forEach(buttons => {
             string = string.substring(0, string.length - 1);
             input.value = string;
         }
+        else if (event.target.innerHTML == '.') {
+            if (!input.value.includes('.')) {
+                string += event.target.innerHTML;
+                input.value = string;
+            }
+        }
+        else if (event.target.innerHTML == '+') {
+            if (!input.value.includes('+')) {
+                string += event.target.innerHTML;
+                input.value = string;
+            }
+        }
+        else if (event.target.innerHTML == '-') {
+            if (!input.value.includes('-')) {
+                string += event.target.innerHTML;
+                input.value = string;
+            }
+        }
+        else if (event.target.innerHTML == '/') {
+            if (!input.value.includes('/')) {
+                string += event.target.innerHTML;
+                input.value = string;
+            }
+        }
+        else if (event.target.innerHTML == '*') {
+            if (!input.value.includes('*')) {
+                string += event.target.innerHTML;
+                input.value = string;
+            }
+        }
 
+        else if (event.target.innerHTML == '%') {
+            if (!input.value.includes('%')) {
+                string += event.target.innerHTML;
+                input.value = string;
+            }
+        }
         else {
             string += event.target.innerHTML;
             input.value = string;

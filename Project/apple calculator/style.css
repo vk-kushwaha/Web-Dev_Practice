@@ -11,14 +11,14 @@ body {
 }
 
 .container {
-    width: 360px;
+    width: 25rem;
     height: 70%;
-    margin: 20px auto;
+    margin: 5rem auto;
     display: flex;
     flex-direction: column;
-    border: 5px solid rgb(186, 183, 183);
-    border-radius: 15px;
-    padding: 20px;
+    border: .5rem solid rgb(186, 183, 183);
+    border-radius: 1rem;
+    padding: 2rem;
 }
 
 .button-grid {
@@ -26,7 +26,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    gap: .3rem;
 
 }
 
